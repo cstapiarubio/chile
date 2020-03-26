@@ -1,0 +1,12 @@
+#zonas h4{
+    display:none;
+}
+
+#zonas img{
+    height: 200px;
+}
+
+.color{
+    background-image: linear-gradient(white,#F8422A, #2A45F8);
+    color:#0B0C0D;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones jQuery</title>
+    <link rel="stylesheet" type="text/css" href="../src/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#principal button').click(function(){
+                $('#principal img').hide();
+            })
+            $('#principal button').dblclick(function(){
+                $('#principal img').show();
+            })
+            $('#cont h1').click(function(){
+                $(this).prepend("<h1>Chi chi</h1>");
+                $(this).append("<h1>le le</h1>");
+                $(this).after("<h2>¡Viva Chile!</h2>");
+            })
+            $('#zonas img').hover(function(){
+                $('#zonas h4').toggle();
+            })
+            $('#zonas p').hover(function(){
+                $(this).addClass('color');
+            })
+        });
+    </script>   
+</head>
+<body>
+<div id="principal">
+    <img class="card-img-top" src="../src/img/imag.jpg" alt="ciudad de Santiago">
+    <button class="bg-primary text-white rounded btn-block">Adiós imagen</button>
+</div>
+
+<div id="cont">
+    <h1 class="text-center mt-5">Chile</h1>
+    <p class="m-5">Chile es un país largo y angosto que se extiende por el borde occidental de Sudamérica, con más de 6,000 km de costa en el océano Pacífico. Santiago, su capital, se ubica en un valle rodeado de los Andes y la cordillera de la Costa. En la Plaza de Armas de la ciudad, bordeada de palmeras, se encuentra la catedral neoclásica y el Museo de Historia Nacional. El enorme Parque Metropolitano cuenta con piscinas, un jardín botánico y un zoológico</p>
+</div>
+
+<div class="row mt-5 mr-4" id="zonas">
+    <div class="col-md-4">
+        <img class="card-img-top" src="../src/img/norte.jpg" alt="zona norte de Chile">
+        <h4 class="text-center mt-5">Zona norte</h4>
+        <p>La zona norte de Chile es la designación general dada a las regiones chilenas de Arica y Parinacota, Tarapacá, Antofagasta, Atacama, Coquimbo y norte de la de Valparaíso,caracterizadas por climas secos, desértico en las regiones más septentrionales, por efecto del desierto de Atacama, y semiárido a medida que se acerca a la zona central del país.</p>
+    </div>
+    <div class="col-md-4">
+        <img class="card-img-top" src="../src/img/centro.jpg" alt="zona centro de Chile">
+        <h4 class="text-center mt-5">Zona central</h4>
+        <p>Zona central de Chile es una de las cinco regiones naturales en que la Corfo dividió Chile en 1950. Sus límites son el río Aconcagua por el norte y el río Biobío por el sur. Limita al norte con el Norte Chico, al este con Argentina y al sur con la Zona sur de Chile. Incluye la mitad sur de la Región de Valparaíso (el archipiélago de Juan Fernández también), la Metropolitana, O'Higgins, Maule, Ñuble, la parte norte de la del Biobío y el extremo que se encuentra al norte del río Biobío de la comuna de Lonquimay en la Araucanía. Es decir, la zona central de Chile se encuentra entre los ríos Aconcagua y Biobío.</p>
+    </div>
+    <div class="col-md-4">
+        <img class="card-img-top" src="../src/img/patagonia.jpg" alt="zona austral de Chile">
+        <h4 class="text-center mt-5">Zona austral</h4>
+        <p>La zona austral de Chile es una de las cinco regiones naturales en que tradicionalmente se divide el territorio de Chile. Coincide con la Patagonia chilena en su sentido restringido y, por lo tanto, abarca la provincia de Palena en la Región de los Lagos, toda la Región de Aysén y toda la Región de Magallanes y Antártica Chilena.
+            Posee aproximadamente 242 320 habitantes, es decir la menos habitada, y una superficie de 219 914 km² (sin considerar el Territorio Chileno Antártico).
+        </p>
+    </div>
+</div>
+</html>
